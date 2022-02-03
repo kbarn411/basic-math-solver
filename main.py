@@ -13,7 +13,7 @@ from sympy import *
 from sympy.solvers import solve
 
 def appHeading(app):
-    put_button("Return to first screen", onclick=selection)
+    put_button("Return to first screen", onclick=lambda : run_js('window.location.reload()'))
     put_markdown(f"## {app}")
     put_markdown("### Please enter values to calculate")
 
