@@ -64,8 +64,8 @@ def regression():
 
     def doRegression():
         with use_scope('regre', clear=True):
-            f = file_upload(label='Provide dataset', max_size='5M', accept='.xlsx')
             try:
+                f = file_upload(label='Provide dataset', max_size='5M', accept='.xlsx')
                 df = pd.read_excel(f['content'])
                 x = df.iloc[:, :-1]
                 y = df.iloc[:, -1]
