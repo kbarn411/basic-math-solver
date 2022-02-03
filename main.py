@@ -108,10 +108,9 @@ if __name__ == '__main__':
     parser.add_argument("--http", action="store_true", default=False, help='Whether to enable http protocol for communicates')
     args = parser.parse_args()
 
-    start_server(main, port=8080, debug=True)
-'''
+    #start_server(main, port=8080, debug=True)
+
     if args.http:
         start_http_server(main, port=args.port)
     else:
         start_ws_server(main, port=args.port, websocket_ping_interval=30)
-'''
