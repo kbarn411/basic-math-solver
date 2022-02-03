@@ -62,6 +62,10 @@ def regression():
     """Linear Regression Calculator"""
     appHeading("REGRESSION")
 
+    put_text(f"Click to download file template: ")
+    contentFileTemplate = open('./file-template.xlsx', 'rb').read()
+    put_file('file-template.xlsx', contentFileTemplate)
+
     def doRegression():
         with use_scope('regre', clear=True):
             try:
@@ -104,9 +108,10 @@ if __name__ == '__main__':
     parser.add_argument("--http", action="store_true", default=False, help='Whether to enable http protocol for communicates')
     args = parser.parse_args()
 
-    #start_server(main, port=8080, debug=True)
-
+    start_server(main, port=8080, debug=True)
+'''
     if args.http:
         start_http_server(main, port=args.port)
     else:
         start_ws_server(main, port=args.port, websocket_ping_interval=30)
+'''
