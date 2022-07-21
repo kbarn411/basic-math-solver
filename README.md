@@ -1,5 +1,6 @@
 # Basic Math Solver App
 
+Aim of this app is to help students who starts learning about numerical methods.
 This app allows user to solve some basic math problems like:
 - integration
 - equation solving
